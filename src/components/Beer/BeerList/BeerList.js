@@ -1,11 +1,9 @@
-import './BeerList.css'
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { Card, Col, Container, Row } from "react-bootstrap"
 import { Link } from 'react-router-dom'
 
-function BeerList() {
-    const apiURL = "https://ih-beers-api2.herokuapp.com/beers"
+function BeerList({ apiURL }) {
     const [beers, setBeers] = useState([])
 
     useEffect(() => {
@@ -20,12 +18,12 @@ function BeerList() {
                 {
                     beers.map((beer) => {
                         return (
-                            <Col>
+                            <Col key={beer._id}>
                                 <Card className="d-flex flex-row m-3">
                                     <Card.Img style={{ width:'4rem'}} variant="top" src={beer.image_url} />
                                     <Card.Body>
                                         <Card.Title>
-                                            <Link to={`/beers/${beer.id}`}>
+                                            <Link to={`/beers/${beer._id}`}>
                                                 {beer.name}
                                             </Link>
                                         </Card.Title>
