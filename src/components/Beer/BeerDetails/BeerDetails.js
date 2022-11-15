@@ -1,9 +1,8 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 
-function BeerDetails({ apiURL }) {
-    const [beer, setBeer] = useState({})
+function BeerDetails({ apiURL, beer, setBeer }) {
     const { id } = useParams()
 
     useEffect(() => {
