@@ -1,8 +1,8 @@
 import { Card, Col, Container, Row } from "react-bootstrap"
 import { Link } from "react-router-dom"
-import allBeersImg from '../assets/beers.png'
-import newBeerImg from '../assets/new-beer.png'
-import randomBeerImg from '../assets/random-beer.png'
+import allBeersImg from '../../assets/beers.png'
+import newBeerImg from '../../assets/new-beer.png'
+import randomBeerImg from '../../assets/random-beer.png'
 
 function HomePage() {
     return (
